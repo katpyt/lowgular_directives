@@ -11,6 +11,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { ExampleDirectiveModule } from './directives/example/example.directive-module';
 import { EmitterDirectiveModule } from './directives/emitter/emitter.directive-module';
 import { HandlerDirectiveModule } from './directives/handler/handler.directive-module';
+import { HasRoleDirectiveModule } from './directives/has-role/has-role.directive-module';
 
 @NgModule({
   declarations: [AppComponent],
@@ -25,7 +26,8 @@ import { HandlerDirectiveModule } from './directives/handler/handler.directive-m
     ReactiveFormsModule,
     ExampleDirectiveModule,
     EmitterDirectiveModule,
-    HandlerDirectiveModule
+    HandlerDirectiveModule,
+    HasRoleDirectiveModule
   ],
   providers: [],
   bootstrap: [AppComponent],
