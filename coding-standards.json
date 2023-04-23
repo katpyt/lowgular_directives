@@ -1,0 +1,79 @@
+{
+  "entityRelations": {
+    "component": {
+      "model": ["PROPERTY"],
+      "queryModel": ["PROPERTY"],
+      "service": ["CONSTRUCTOR"],
+      "router": ["CONSTRUCTOR"],
+      "activatedRoute": ["CONSTRUCTOR"]
+    },
+    "service": {
+      "httpClient": ["CONSTRUCTOR"],
+      "model": ["PARAMETER", "RETURN"]
+    },
+    "pipe": {
+      "model": ["PROPERTY"],
+      "service": ["CONSTRUCTOR"]
+    }
+  },
+  "external": {
+    "httpClient": {
+      "type": "HttpClient",
+      "module": "@angular/common/http"
+    },
+    "router": {
+      "type": "Router",
+      "module": "@angular/router"
+    },
+    "activatedRoute": {
+      "type": "ActivatedRoute",
+      "module": "@angular/router"
+    }
+  },
+  "entities": {
+    "component": {
+      "type": "ANGULAR_COMPONENT",
+      "folder": "components/$name$",
+      "config": {
+        "stylesExtension": "none",
+        "viewEncapsulation": "None",
+        "selector": "generated",
+        "changeDetectionStrategy": "OnPush"
+      }
+    },
+    "model": {
+      "type": "DATA_STRUCTURE"
+    },
+    "query": {
+      "type": "DATA_STRUCTURE",
+      "suffix": "QueryModel",
+      "folder": "queries"
+    },
+    "service": {
+      "type": "ANGULAR_SERVICE"
+    },
+    "pipe": {
+      "id": "pipe",
+      "type": "ANGULAR_PIPE",
+      "suffix": "Pipe",
+      "folder": "pipes/$name$"
+    },
+    "directive": {
+      "type": "ANGULAR_DIRECTIVE"
+    }
+  }
+}
+
+
+{
+  "entityRelations": {},
+  "external": {},
+  "entities": {
+    "directive": {
+      "type": "ANGULAR_DIRECTIVE"
+    },
+    "service": {
+      "type": "ANGULAR_SERVICE"
+    }
+  }
+}
