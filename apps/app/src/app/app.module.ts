@@ -9,6 +9,8 @@ import { RouterModule } from '@angular/router';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { ReactiveFormsModule } from '@angular/forms';
 import { ExampleDirectiveModule } from './directives/example/example.directive-module';
+import { EmitterDirectiveModule } from './directives/emitter/emitter.directive-module';
+import { HandlerDirectiveModule } from './directives/handler/handler.directive-module';
 
 @NgModule({
   declarations: [AppComponent],
@@ -21,7 +23,9 @@ import { ExampleDirectiveModule } from './directives/example/example.directive-m
     AppRoutingModule,
     MatSnackBarModule,
     ReactiveFormsModule,
-    ExampleDirectiveModule
+    ExampleDirectiveModule,
+    EmitterDirectiveModule,
+    HandlerDirectiveModule
   ],
   providers: [],
   bootstrap: [AppComponent],
