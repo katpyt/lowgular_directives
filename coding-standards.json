@@ -59,21 +59,10 @@
       "folder": "pipes/$name$"
     },
     "directive": {
-      "type": "ANGULAR_DIRECTIVE"
-    }
-  }
-}
-
-
-{
-  "entityRelations": {},
-  "external": {},
-  "entities": {
-    "directive": {
-      "type": "ANGULAR_DIRECTIVE"
-    },
-    "service": {
-      "type": "ANGULAR_SERVICE"
+      "id": "directive",
+      "type": "ANGULAR_DIRECTIVE",
+      "suffix": "Directive",
+      "folder": "directives/$name$"
     }
   }
 }
