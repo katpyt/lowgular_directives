@@ -19,10 +19,15 @@
       "model": ["PROPERTY"],
       "service": ["CONSTRUCTOR"],
       "elementRef": ["CONSTRUCTOR"],
-      "renderer2": ["CONSTRUCTOR"]
+      "renderer2": ["CONSTRUCTOR"],
+      "viewContainerRef": ["CONSTRUCTOR"]
     }
   },
   "external": {
+    "viewContainerRef": {
+      "type": "ViewContainerRef",
+      "module": "@angular/core"
+    },
     "elementRef": {
       "type": "ElementRef",
       "module": "@angular/core"
