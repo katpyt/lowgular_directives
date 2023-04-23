@@ -12,9 +12,12 @@ import { ExampleDirectiveModule } from './directives/example/example.directive-m
 import { EmitterDirectiveModule } from './directives/emitter/emitter.directive-module';
 import { HandlerDirectiveModule } from './directives/handler/handler.directive-module';
 import { HasRoleDirectiveModule } from './directives/has-role/has-role.directive-module';
+import { SimpleFormComponentModule } from "./components/simple-form/simple-form.component-module";
 
 @NgModule({
   declarations: [AppComponent],
+  providers: [],
+  bootstrap: [AppComponent],
   imports: [
     BrowserModule,
     NoopAnimationsModule,
@@ -27,9 +30,8 @@ import { HasRoleDirectiveModule } from './directives/has-role/has-role.directive
     ExampleDirectiveModule,
     EmitterDirectiveModule,
     HandlerDirectiveModule,
-    HasRoleDirectiveModule
-  ],
-  providers: [],
-  bootstrap: [AppComponent],
+    HasRoleDirectiveModule,
+    SimpleFormComponentModule
+  ]
 })
 export class AppModule { }

@@ -1,0 +1,15 @@
+<form [formGroup]="form"
+      (ngSubmit)="onFormSubmitted(form)">
+    <input type="text"
+           appMyRequired
+           placeholder="Name"
+           formControlName="name"
+           required>
+    <input type="text"
+           placeholder="Surname"
+           formControlName="surname"
+           required>
+    <button type="submit"
+            [disabled]="!form.valid"
+            color="primary">Submit</button>
+</form>
