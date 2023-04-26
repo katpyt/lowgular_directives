@@ -12,6 +12,6 @@ export class AppComponent {
 
   }
   onConfirmed($event: boolean) {
-    console.log($event);
+    console.log($event); test
   }
 }

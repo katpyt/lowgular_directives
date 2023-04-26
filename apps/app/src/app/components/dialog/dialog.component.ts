@@ -10,5 +10,6 @@ import { MatDialogRef } from '@angular/material/dialog';
 export class DialogComponent {
   readonly dialog = { title: "Confirm your choice", content: "abc" }
 
+
 }
 

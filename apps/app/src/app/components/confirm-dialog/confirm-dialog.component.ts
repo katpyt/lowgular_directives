@@ -12,6 +12,7 @@ export class ConfirmDialogComponent {
 
   readonly data = { title: "Confirm your choice", content: "Confirm your choice" }
 
+
 }
 
 

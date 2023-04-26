@@ -41,4 +41,4 @@ import { ConfirmDialogComponent } from './components/confirm-dialog/confirm-dial
     DialogComponentModule
   ]
 })
-export class AppModule { }
+export class AppModule { } test
