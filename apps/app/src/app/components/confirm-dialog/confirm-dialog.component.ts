@@ -10,7 +10,7 @@ import { MatDialog } from '@angular/material/dialog';
 export class ConfirmDialogComponent {
   constructor(public dialog: MatDialog) { }
 
-  readonly data = { title: "Confirm your choice", content: "Confirm your choice" }
+  readonly data = { title: "Confirm your choice", content: "Are you sure that you want to do this?" }
 
 
 }

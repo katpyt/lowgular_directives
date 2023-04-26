@@ -17,6 +17,9 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { TelValidatorDirectiveTestComponent } from './tel-validator-directive.test-component';
 import { SnackBarDirectiveModule } from '../directives/snack-bar/snack-bar.directive-module';
 import { ConfirmDialogDirectiveModule } from '../directives/confirm-dialog/confirm-dialog.directive-module';
+import { BlockPasteDirectiveModule } from '../directives/block-paste-directive/block-paste.directive-module';
+import { BackgroundCarouselDirectiveModule } from '../directives/background-carousel/background-carousel.directive-module';
+import { MovableDirectiveModule } from '../directives/movable-directive/movable.directive-module';
 
 @NgModule({
   declarations: [
@@ -39,7 +42,10 @@ import { ConfirmDialogDirectiveModule } from '../directives/confirm-dialog/confi
     AppRoutingModule,
     ReactiveFormsModule,
     SnackBarDirectiveModule,
-    ConfirmDialogDirectiveModule
+    ConfirmDialogDirectiveModule,
+    BlockPasteDirectiveModule,
+    BackgroundCarouselDirectiveModule,
+    MovableDirectiveModule
   ],
   providers: [],
   bootstrap: [],

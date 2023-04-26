@@ -12,5 +12,5 @@ export class MyRequiredDirective implements Validator {
             return null;
         }
         return { required: true }
-    } test
+    }
 }

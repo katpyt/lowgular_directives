@@ -17,6 +17,8 @@ import { SnackBarDirectiveModule } from './directives/snack-bar/snack-bar.direct
 import { ConfirmDialogComponentModule } from './components/confirm-dialog/confirm-dialog.component-module';
 import { DialogComponentModule } from './components/dialog/dialog.component-module';
 import { ConfirmDialogComponent } from './components/confirm-dialog/confirm-dialog.component';
+import { MovableDirectiveModule } from './directives/movable-directive/movable.directive-module';
+import { BlockPasteDirectiveModule } from './directives/block-paste-directive/block-paste.directive-module';
 
 @NgModule({
   declarations: [AppComponent],
@@ -38,7 +40,9 @@ import { ConfirmDialogComponent } from './components/confirm-dialog/confirm-dial
     SimpleFormComponentModule,
     SnackBarDirectiveModule,
     ConfirmDialogComponentModule,
-    DialogComponentModule
+    DialogComponentModule,
+    BlockPasteDirectiveModule,
+    MovableDirectiveModule
   ]
 })
 export class AppModule { } 

@@ -1,17 +1,13 @@
-<ng-template>
-        <h1 mat-dialog-title>
-                {{data.title}}
-        </h1>
-        <mat-dialog-content>
-                {{data.content}}
-        </mat-dialog-content>
-        <mat-dialog-actions>
-                <button mat-button
-                        [mat-dialog-close]="false"
-                        confirmDialog
-                        cdkFocusInitial> Cancel</button>
-                <button mat-button
-                        [mat-dialog-close]="true"
-                        confirmDialog>Confirm</button>
-        </mat-dialog-actions>test
-</ng-template>
+<h1 mat-dialog-title>{{data.title}}</h1>
+<mat-dialog-content>
+        {{data.content}}
+</mat-dialog-content>
+<mat-dialog-actions>
+        <button mat-button
+                [mat-dialog-close]="false"
+                confirmDialog
+                cdkFocusInitial> Cancel</button>
+        <button mat-button
+                [mat-dialog-close]="true"
+                confirmDialog>Confirm</button>
+</mat-dialog-actions>test
