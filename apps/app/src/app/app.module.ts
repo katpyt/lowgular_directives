@@ -13,10 +13,14 @@ import { EmitterDirectiveModule } from './directives/emitter/emitter.directive-m
 import { HandlerDirectiveModule } from './directives/handler/handler.directive-module';
 import { HasRoleDirectiveModule } from './directives/has-role/has-role.directive-module';
 import { SimpleFormComponentModule } from "./components/simple-form/simple-form.component-module";
+import { SnackBarDirectiveModule } from './directives/snack-bar/snack-bar.directive-module';
+import { ConfirmDialogComponentModule } from './components/confirm-dialog/confirm-dialog.component-module';
+import { DialogComponentModule } from './components/dialog/dialog.component-module';
+import { ConfirmDialogComponent } from './components/confirm-dialog/confirm-dialog.component';
 
 @NgModule({
   declarations: [AppComponent],
-  providers: [],
+  providers: [ConfirmDialogComponent],
   bootstrap: [AppComponent],
   imports: [
     BrowserModule,
@@ -31,7 +35,10 @@ import { SimpleFormComponentModule } from "./components/simple-form/simple-form.
     EmitterDirectiveModule,
     HandlerDirectiveModule,
     HasRoleDirectiveModule,
-    SimpleFormComponentModule
+    SimpleFormComponentModule,
+    SnackBarDirectiveModule,
+    ConfirmDialogComponentModule,
+    DialogComponentModule
   ]
 })
 export class AppModule { }

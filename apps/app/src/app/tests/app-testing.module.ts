@@ -1,13 +1,11 @@
 import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
-import { AppComponent } from '../app.component';
 import { MaterialModule } from '../material.module';
 import { BrowserModule } from '@angular/platform-browser';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from '../app-routing.module';
 import { RouterModule } from '@angular/router';
 import { SnackbarDirectiveTestComponent } from './snackbar-directive.test-component';
-import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { MoveDirectiveTestComponent } from './move-directive.test-component';
 import { BgCarouselDirectiveTestComponent } from './bg-carousel-directive.test-component';
 import { FeatureFlagDirectiveTestComponent } from './feature-flag-directive.test-component';
@@ -17,6 +15,8 @@ import { ConfirmDialogDirectiveTestComponent } from './confirm-dialog-directive.
 import { UrlValidatorDirectiveTestComponent } from './url-vaidator-directive.test-component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { TelValidatorDirectiveTestComponent } from './tel-validator-directive.test-component';
+import { SnackBarDirectiveModule } from '../directives/snack-bar/snack-bar.directive-module';
+import { ConfirmDialogDirectiveModule } from '../directives/confirm-dialog/confirm-dialog.directive-module';
 
 @NgModule({
   declarations: [
@@ -37,10 +37,11 @@ import { TelValidatorDirectiveTestComponent } from './tel-validator-directive.te
     MaterialModule,
     RouterModule,
     AppRoutingModule,
-    MatSnackBarModule,
     ReactiveFormsModule,
+    SnackBarDirectiveModule,
+    ConfirmDialogDirectiveModule
   ],
   providers: [],
   bootstrap: [],
 })
-export class AppTestingModule {}
+export class AppTestingModule { }
