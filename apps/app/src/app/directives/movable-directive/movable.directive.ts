@@ -5,33 +5,49 @@ import { Subject } from 'rxjs';
 
 export class MovableDirective {
     constructor(private _renderer2: Renderer2, private _elementRef: ElementRef) {
+        // document.addEventListener('mousemove', onmousemove(this._elementRef.nativeElement));
     }
 
-    private offsetX = 0;
-    private offsetY = 0;
+    public offsetX = 0;
+    public offsetY = 0;
+    public isClicked = false;
 
-    @HostListener('click')
+    @HostListener('mousedown')
     handleMouseDown(event: MouseEvent) {
-        // const localX = event.clientX - event.target.offsetLeft;
-        // const localY = event.clientY - event.target.offsetTop;
-        // localMousePos = { x: localX, y: localY };
+        this.isClicked = true;
+        console.log("down");
+        this.offsetX = this._elementRef.nativeElement.offsetLeft;
+        this.offsetY = this._elementRef.nativeElement.offsetTop;
+        console.log("offsetX [" + this.offsetX + "], offsetY [" + this.offsetY + "]");
+    }
 
-        console.log(event);
-        console.log("move");
-        this.offsetX = event.clientX;
-        this.offsetY = event.clientY;
-        console.log("offsetX [" + this.offsetX + "]");
+    @HostListener('mouseup')
+    handleMouseUp(event: MouseEvent) {
+        this.isClicked = false;
+        console.log("down");
+        this.offsetX = this._elementRef.nativeElement.offsetLeft;
+        this.offsetY = this._elementRef.nativeElement.offsetTop;
+        console.log("offsetX [" + this.offsetX + "], offsetY [" + this.offsetY + "]");
     }
 
     @HostListener('mousemove')
-    onmousemove() {
-
-        this._renderer2.setProperty(
-            this._elementRef.nativeElement,
-            'ng-style',
-            `transform: translate3d(${this.offsetX},${this.offsetY},0)`
-        );
+    onmousemove(e: MouseEvent) {
+        // const localX = event.clientX;
+        // const localY = event.clientY;
+        if (this.isClicked) {
+            console.log("move");
+            this._renderer2.setProperty(
+                this._elementRef.nativeElement,
+                'ng-style',
+                `transform: translate3d(${e.clientX}px,${e.clientY}px,0)`
+            );
+        }
     }
 
 
 }
+function logKey(e: MouseEvent) {
+    console.log(`Screen X/Y: ${e.screenX}, ${e.screenY}`);
+    console.log(`Client X / Y: ${e.clientX}, ${e.clientY}`);
+}
+

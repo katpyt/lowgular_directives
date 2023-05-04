@@ -20,6 +20,10 @@ import { ConfirmDialogDirectiveModule } from '../directives/confirm-dialog/confi
 import { BlockPasteDirectiveModule } from '../directives/block-paste-directive/block-paste.directive-module';
 import { BackgroundCarouselDirectiveModule } from '../directives/background-carousel/background-carousel.directive-module';
 import { MovableDirectiveModule } from '../directives/movable-directive/movable.directive-module';
+import { DeleteProductDirectiveModule } from '../directives/delete-product/delete-product.directive-module';
+import { FeatureFlagDirectiveModule } from '../directives/feature-flag/feature-flag.directive-module';
+import { UrlDirectiveModule } from '../directives/url/url.directive-module';
+import { TelValidatorDirectiveModule } from '../directives/tel-validator/tel-validator.directive-module';
 
 @NgModule({
   declarations: [
@@ -45,7 +49,11 @@ import { MovableDirectiveModule } from '../directives/movable-directive/movable.
     ConfirmDialogDirectiveModule,
     BlockPasteDirectiveModule,
     BackgroundCarouselDirectiveModule,
-    MovableDirectiveModule
+    MovableDirectiveModule,
+    DeleteProductDirectiveModule,
+    FeatureFlagDirectiveModule,
+    UrlDirectiveModule,
+    TelValidatorDirectiveModule
   ],
   providers: [],
   bootstrap: [],

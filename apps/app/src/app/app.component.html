@@ -22,7 +22,48 @@
         (confirmed)="onConfirmed($event.returnValue)">Open dialog </button> -->
 
 
-<h1 bgCarousel>Colors</h1>
-<div bgCarousel></div>
-<div style="background-color: navy; width: 50px; height: 50px;"
-     moveable>test</div>
+<!-- <div [bgCarousel]
+     style="background-color: navy; width: 50px; height: 50px;">test</div> -->
+<!-- <div style="background-color: red; width: 50px; height: 50px;"
+     moveable>test</div> -->
+
+<button data-test-id="directive"
+        [deleteProduct]="1">
+    Delete
+</button>
+
+<input blockPaste
+       type="text">
+
+
+<h1>urlDirective</h1>
+<input [formControl]="formCtrl"
+       type="url"
+       urlDirectivew />
+<div data-test-id="first-error">
+    <span *ngIf="formCtrl.getError('mustStartWithHttpOrHttps'); else isValid">invalid</span>
+</div>
+<div data-test-id="second-error">
+    <span *ngIf="formCtrl.getError('mustEndWithDotDomain'); else isValid">invalid</span>
+</div>
+<ng-template #isValid>valid</ng-template>
+
+
+<h1>telDirective</h1>
+<input [formControl]="formCtrlTel"
+       type="tel"
+       appTelValidator />
+
+<h1>urlDirective 2</h1>
+<form [formGroup]="form"
+      (ngSubmit)="onFormSubmitted()">
+    <input type="text"
+           appMyRequired
+           placeholder="Name"
+           formControlName="formCtrl"
+           UrlDirectiveVal>
+
+    <button type="submit"
+            [disabled]="!form.valid"
+            color="primary">Submit</button>
+</form>

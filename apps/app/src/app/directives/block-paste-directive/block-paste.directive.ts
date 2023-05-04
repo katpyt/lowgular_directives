@@ -1,12 +1,12 @@
-import { Directive, HostListener } from '@angular/core';
+import { Directive, HostListener, Input } from '@angular/core';
 
 @Directive({ selector: 'input[blockPaste],textarea[blockPaste]' })
 export class BlockPasteDirective {
 
-    @HostListener("paste")
-    blockPaste(event: ClipboardEvent) {
-        event.stopPropagation();
+    // @Input() blockPaste?: HTMLElement;
+
+    @HostListener("paste", ['$event'])
+    onPaste(event: Event) {
         event.preventDefault();
     }
-
 }

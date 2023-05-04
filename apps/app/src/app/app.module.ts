@@ -19,6 +19,9 @@ import { DialogComponentModule } from './components/dialog/dialog.component-modu
 import { ConfirmDialogComponent } from './components/confirm-dialog/confirm-dialog.component';
 import { MovableDirectiveModule } from './directives/movable-directive/movable.directive-module';
 import { BlockPasteDirectiveModule } from './directives/block-paste-directive/block-paste.directive-module';
+import { BackgroundCarouselDirectiveModule } from './directives/background-carousel/background-carousel.directive-module';
+import { DeleteProductDirectiveModule } from './directives/delete-product/delete-product.directive-module';
+import { UrlDirectiveModule } from './directives/url/url.directive-module';
 
 @NgModule({
   declarations: [AppComponent],
@@ -42,7 +45,10 @@ import { BlockPasteDirectiveModule } from './directives/block-paste-directive/bl
     ConfirmDialogComponentModule,
     DialogComponentModule,
     BlockPasteDirectiveModule,
-    MovableDirectiveModule
+    MovableDirectiveModule,
+    BackgroundCarouselDirectiveModule,
+    DeleteProductDirectiveModule,
+    UrlDirectiveModule
   ]
 })
 export class AppModule { } 
